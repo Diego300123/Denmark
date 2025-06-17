@@ -1,0 +1,321 @@
+/* ------------------------------------------------- Banner */
+.banner {
+    display: flex;
+    position: relative; 
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-content {
+    flex: 1;
+    height: 80vh;
+    width: 80vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background-image: url('../imgs/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-title {
+    flex: 1;
+    text-align: center;
+}
+
+.banner-title {
+    font-size: 4rem;
+    animation: fadeInUp 1.5s;
+}
+
+.banner-subtitle {
+    font-size: 1.4rem;
+    animation: fadeInUp 1.5s 0.5s backwards;
+}
+
+/* ----------------RESPONSIVE */
+@media (min-width: 1400px) {
+    .banner-content {
+        width: 85vw;
+        height: 85vh;
+    }
+    
+    .banner-title {
+        font-size: 5rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 1199px) {
+    .banner-content {
+        width: 85vw;
+        height: 75vh;
+    }
+    
+    .banner-title {
+        font-size: 3.5rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .banner {
+        padding: 1rem;
+    }
+    
+    .banner-content {
+        width: 95vw;
+        height: 65vh;
+        background-position: center top;
+    }
+    
+    .banner-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .banner {
+        padding: 0.5rem;
+    }
+    
+    .banner-content {
+        width: 98vw;
+        height: 60vh;
+        background-position: center;
+    }
+    
+    .banner-title {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+        line-height: 1.4;
+    }
+}
+
+
+
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* ------------------------------- Transport */
+.transport-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.transport-box {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.transport-box:hover {
+    transform: translateY(-10px);
+}
+
+.transport-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.transport-link {
+    display: block;
+    color: inherit;
+    text-decoration: none; 
+}
+
+.transport-link:hover {
+    text-decoration: none;
+    transform: translateY(-5px); 
+    color: var(--color-secondary);
+}
+
+
+
+
+
+/* ----------------------------------- Flights */
+
+#flights {
+    scroll-margin-top: 50px;
+}
+
+.flights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.flight-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.flight-box h3 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.flight-info p {
+    margin: 10px 0;
+}
+
+
+
+
+
+
+/* -------------------------------- Train */
+#trains {
+    scroll-margin-top: 50px;
+}
+
+.train-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+.train-list {
+    list-style: none;
+    padding: 0;
+}
+
+.train-item {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.train-item strong {
+    display: block;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+/* ----------------------------- Tips */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tip-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.tip-box h3 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+
+
+/* --------------------------------- Responsive */
+@media (max-width: 768px) {
+    .transport-list {
+        flex-direction: column;
+    }
+
+    .train-item {
+        padding: 15px;
+    }
+
+    .banner {
+        height: 50vh;
+    }
+}
+
+@media (min-width: 605px) and (max-width: 1128px) {
+    .flights-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #flight1 {
+        grid-column: 1/3;
+    }
+
+    #flight2 {
+        grid-column: 3/5;
+    }
+
+    #flight3 {
+        grid-column: 2/4;
+        margin-top: 2rem;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #tip1 {
+        grid-column: 1/3;
+    }
+
+    #tip2 {
+        grid-column: 3/5;
+    }
+
+    #tip3 {
+        grid-column: 2/4;
+        margin-top: 2rem;
+    }
+}
